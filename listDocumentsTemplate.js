@@ -25,7 +25,7 @@ admin.initializeApp({
 admin
   .firestore()
   .collection(collectionName)
-  .limit(limit)
+  .limit(parseInt(limit))
   .get()
   .then((snapshot) => {
     let rows = [];
